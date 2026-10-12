@@ -1,0 +1,50 @@
+### 测试查询接口（GET）
+GET http://localhost:8080/students/1
+Accept: application/json
+
+### 测试添加接口（POST + JSON）
+POST http://localhost:8080/students/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "王五",
+  "age": 20
+}
+###
+DELETE http://localhost:8080/students/1
+
+###
+POST http://localhost:8080/students/batch
+Content-Type: application/json
+
+[
+{
+ "id": 100,
+ "name": "王五",
+ "age": 20
+},
+
+{
+  "id": 100,
+  "name": "王五",
+  "age": 20
+},
+
+{
+  "id": 123,
+  "name": "王五",
+  "age": 20
+}
+
+]
+
+###
+PUT http://localhost:8080/students/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "天妒",
+  "age": 18
+}
